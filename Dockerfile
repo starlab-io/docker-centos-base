@@ -15,6 +15,10 @@ RUN yum install -y git kernel-devel wget bc openssl-devel python-setuptools \
     yum clean all && \
     rm -rf /var/cache/yum/* /tmp/* /var/tmp/*
 
+# Add python-pip
+ADD pip-1.5.6.tar.gz /root/
+RUN cd /root/pip-1.5.6 && python ./setup.py install
+
 VOLUME ["/source"]
 WORKDIR /source
 CMD ["/bin/bash"]

@@ -9,7 +9,7 @@ ADD proxy.crt /etc/pki/ca-trust/source/anchors/
 RUN update-ca-trust extract
 
 # build dependencies
-RUN yum install -y git kernel-devel wget bc openssl-devel python-setuptools \
+RUN yum install -y git kernel-devel wget bc openssl openssl-devel python-setuptools \
         python-virtualenv dracut-network nfs-utils check && \
     yum groupinstall -y "Development Tools" && \
     yum clean all && \

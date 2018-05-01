@@ -1,4 +1,4 @@
-FROM centos:7.2.1511
+FROM centos:7.4.1708
 MAINTAINER Star Lab <info@starlab.io>
 
 RUN mkdir /source
